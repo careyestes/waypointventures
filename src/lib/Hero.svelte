@@ -31,7 +31,6 @@
 		height: 90vh;
 		background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 10%, transparent 50%), url('../assets/cyano-map.png');
 		background-size: 125%;
-		background-repeat: space;
 		backdrop-filter: brightness(50%);
 		color: var(--paper);
 		animation: pan-background 200s infinite ease; /* Adjust the time as necessary */
@@ -58,6 +57,7 @@
 			gap: 4rem;
 			justify-content: space-between;
 			align-items: center;
+			background-size: cover;
 		}
 		h1 {
 			align-items: flex-end;
