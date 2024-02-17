@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -68,8 +67,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
@@ -80,8 +78,7 @@
           "type": "Date",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -91,8 +88,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
@@ -155,8 +151,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -166,8 +161,7 @@
           "type": "Location",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -177,8 +171,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
@@ -189,8 +182,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -223,12 +215,7 @@
               ]
             },
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code"
-              ]
+              "enabledMarks": ["bold", "italic", "underline", "code"]
             }
           ],
           "disabled": false,
@@ -237,8 +224,7 @@
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -381,8 +367,7 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -460,8 +445,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -541,21 +525,17 @@
         "description": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "In the heart of the city",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               }
@@ -566,8 +546,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -647,21 +626,17 @@
         "description": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "Where it all began",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               }
@@ -672,8 +647,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -753,21 +727,17 @@
         "description": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "We're in the Big Apple too",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               }
@@ -778,8 +748,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -857,8 +826,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -936,8 +904,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1015,8 +982,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1094,8 +1060,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1173,8 +1138,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1252,8 +1216,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1333,21 +1296,17 @@
         "description": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "California, but not too hot",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               }
@@ -1360,8 +1319,7 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1434,8 +1392,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1508,8 +1465,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1582,8 +1538,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1656,8 +1611,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1730,8 +1684,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1804,8 +1757,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1878,8 +1830,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1952,8 +1903,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -2026,8 +1976,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -2100,8 +2049,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -2220,8 +2168,7 @@
       }
     }
   ],
-  "webhooks": [
-  ],
+  "webhooks": [],
   "roles": [
     {
       "name": "Author",
@@ -2229,9 +2176,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -2247,9 +2192,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2265,9 +2208,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2283,9 +2224,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -2301,9 +2240,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2319,9 +2256,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2337,19 +2272,12 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ],
-        "EnvironmentAliases": [
-        ],
-        "Tags": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
       },
       "sys": {
         "type": "Role",
@@ -2418,19 +2346,12 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ],
-        "EnvironmentAliases": [
-        ],
-        "Tags": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
       },
       "sys": {
         "type": "Role",
@@ -2467,9 +2388,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -2485,9 +2404,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -2503,9 +2420,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2529,9 +2444,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2562,9 +2475,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "delete"
-          ],
+          "actions": ["delete"],
           "constraint": {
             "and": [
               {
@@ -2588,9 +2499,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2614,9 +2523,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2647,9 +2554,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "delete"
-          ],
+          "actions": ["delete"],
           "constraint": {
             "and": [
               {
@@ -2673,19 +2578,12 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ],
-        "EnvironmentAliases": [
-        ],
-        "Tags": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
       },
       "sys": {
         "type": "Role",
@@ -2722,9 +2620,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2740,9 +2636,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2758,9 +2652,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2783,9 +2675,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2808,19 +2698,12 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ],
-        "EnvironmentAliases": [
-        ],
-        "Tags": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
       },
       "sys": {
         "type": "Role",

@@ -48,7 +48,6 @@
 	h2 {
 		text-align: center;
 		-webkit-text-stroke: 0.5px var(--brass);
-		text-stroke: 0.5px var(--brass);
 		text-shadow: 0 0 30px var(--navy);
 	}
 

@@ -113,9 +113,6 @@
 		font-size: var(--fluid-5);
 		line-height: calc(var(--fluid-6) / 1.2);
 	}
-	.first-section p {
-		margin: 2rem 0;
-	}
 	@media screen and (max-width: 1200px) {
 		.first-section {
 			margin: 0 auto;
