@@ -65,7 +65,7 @@
       padding: 4rem 0 0;
     }
     .circle-container {
-      padding: 30rem 2rem;
+      padding: 20rem 2rem;
       border: 0;
       border-radius: 0;
     }
