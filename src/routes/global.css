@@ -144,8 +144,12 @@ h2 {
   font-family: var(--header-font);
   font-weight: 900;
   line-height: 4rem;
-  /* text-shadow: -1.5px -1.5px 0 var(--navy), 1.5px -1.5px 0 var(--navy),-1.5px 1.5px 0 var(--navy), 1.5px 1.5px 0 var(--navy); */
-  -webkit-text-stroke: 1.6px var(--navy);
+  -webkit-text-stroke: 1.4px var(--navy);
+}
+@media screen and (max-width: 1200px) {
+	h2 {
+		-webkit-text-stroke: 1.1px var(--navy);
+	}
 }
 
 .heading-1 {
