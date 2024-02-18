@@ -58,7 +58,7 @@
 			gap: 4rem;
 			justify-content: space-between;
 			align-items: center;
-			height: 90vh;
+			height: 70vh;
 			background-size: cover;
 		}
 		h1 {
