@@ -61,9 +61,11 @@
 
   @media screen and (max-width: 1200px) {
     .circle-section {
+      max-width: 100%;
       padding: 4rem 0 0;
     }
     .circle-container {
+      padding: 30rem 2rem;
       border: 0;
       border-radius: 0;
     }
