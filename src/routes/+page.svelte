@@ -117,7 +117,7 @@
 		.first-section {
 			margin: 0 auto;
 			padding: 0 2rem;
-			transform: translateY(-3.3rem);
+			transform: translateY(0);
 		}
 		.first-section h2 {
 			line-height: var(--fluid-5)
@@ -125,10 +125,6 @@
 		.small {
 			padding: 0 2rem;
 		}
-	}
-
-	.compass-container {
-		transform: translateY(-4.3rem);
 	}
 
 </style>
