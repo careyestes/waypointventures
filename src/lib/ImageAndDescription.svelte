@@ -24,7 +24,23 @@
   h3 {
     margin-bottom: 1rem;
   }
+  .image {
+    display: flex;
+    align-items: center;
+    flex: 0 0 30rem;
+    width: 30rem;
+    height: 30rem;
+    margin-right: 4rem;
+    border: 5px solid var(--brass);
+    border-radius: 50%;
+    overflow: hidden;  }
   @media screen and (max-width: 1200px) {
+    .image {
+      flex: 0 0 20rem;
+      width: 20rem;
+      height: 20rem;
+      margin: 0;
+    }
     .container {
       flex-direction: column;
       gap: 2rem;
