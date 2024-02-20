@@ -106,12 +106,16 @@
 	.first-section {
 		max-width: 55rem;
 		margin: 0 auto;
-		transform: translateY(-5.5rem);
+	transform: translateY(-5.5rem);
 	}
 	.first-section h2 {
 		margin: 0 0 1rem;
 		font-size: var(--fluid-5);
 		line-height: calc(var(--fluid-6) / 1.2);
+	}
+	
+	.compass-container {
+		transform: translateY(-4rem);
 	}
 	@media screen and (max-width: 1200px) {
 		.first-section {
@@ -124,6 +128,9 @@
 		}
 		.small {
 			padding: 0 2rem;
+		}
+		.compass-container {
+			transform: translateY(0);
 		}
 	}
 
