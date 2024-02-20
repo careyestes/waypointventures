@@ -14,15 +14,15 @@
     "node": ">=18"
   },
   "devDependencies": {
+    "contentful-import": "^9.4.8",
+    "dotenv": "^16.3.1",
     "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.0.3",
-    "vite": "^4.5.0",
-    "contentful-import": "^9.4.8",
-    "dotenv": "^16.3.1"
+    "vite": "^4.5.0"
   },
   "type": "module",
   "dependencies": {
-    "@contentful/rich-text-html-renderer": "^16.3.0",
+    "@contentful/rich-text-html-renderer": "^16.3.4",
     "@sveltejs/adapter-auto": "^2.1.1",
     "@sveltejs/kit": "^1.27.3",
     "svelte": "^4.2.2"

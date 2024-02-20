@@ -7,15 +7,17 @@
 </script>
 
 <div class="flex align-center container">
-  <div class="flexed-item image">
-    <img src={imageURL} alt={alt}>
-  </div>
+  {#if imageURL}
+    <div class="flexed-item image">
+      <img src={imageURL} alt={alt}>
+    </div>
+  {/if}
   <div class="flexed-item">
     <h3 class="heading-4">{heading}</h3>
     {#if small}
-      <p><small>{description}</small></p>
+      <small>{@html description}</small>
     {:else}
-      <p>{description}</p>
+      {@html description}
     {/if}
   </div>
 </div>

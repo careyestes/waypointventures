@@ -152,6 +152,13 @@ h2 {
 	}
 }
 
+section {
+	margin: 0 auto;
+}
+section p {
+	padding: 1rem 0;
+}
+
 .heading-1 {
   font-size: var(--fluid-4);
   font-weight: 700;
