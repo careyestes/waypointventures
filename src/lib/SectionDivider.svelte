@@ -9,6 +9,7 @@
     margin: 4rem 0;
     padding: 6rem 1rem;
     background: var(--royal) url('../assets/topo-sea-map.jpg') center center;
+    background-size: cover;
     border-top: 5px solid var(--medium-gold);
     border-bottom: 5px solid var(--medium-gold);
     color: var(--paper);
