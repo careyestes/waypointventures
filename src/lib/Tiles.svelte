@@ -5,7 +5,7 @@
 </script>
 
 
-<section class="medium graphic-tile-container">
+<section class="large graphic-tile-container">
 	<ul>
 		<li>
 			<img src={anchor} alt="An illustration of an anchor overlaid with two crossing swords" />
