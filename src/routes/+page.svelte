@@ -36,7 +36,10 @@
 
 <section class="large">
 	<SectionTitle title={data.beliefSectionTitle} />
-	<ImageAndDescription imageURL={leader} alt="A woman syanding in fron of a whiteboard" heading={data.beliefSectionHeader} description={beliefSectionTextHTML} />
+</section>
+<br />
+<section class="small">
+	<ImageAndDescription imageURL="" alt="" heading={data.beliefSectionHeader} description={beliefSectionTextHTML} />
 </section>
 
 <SectionDivider title={data.innovationDivider} />
