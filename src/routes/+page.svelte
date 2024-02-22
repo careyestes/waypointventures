@@ -80,7 +80,7 @@
 	<div class="flex direcion-column gap-4">
 
 		{#each data.leadership as leader}
-			<ImageAndDescription small={true} imageURL={leader.image?.url} alt="" heading={leader.name} description={data && data.innovateSectionText ? documentToHtmlString(data.innovateSectionText.json) : ''} />
+			<ImageAndDescription small={true} imageURL={leader.image?.url} alt="" heading={leader.name} description={documentToHtmlString(leader.bio?.json)} />
 		{/each}
 	
 		<div>
