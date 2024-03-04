@@ -1,4 +1,6 @@
 <script>
+	import { createEventDispatcher } from 'svelte';
+	import { slide } from 'svelte/transition';
 	import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 	import Hero from '../lib/Hero.svelte';
 	import Tiles from '../lib/Tiles.svelte';
@@ -17,6 +19,15 @@
 	$: introSectionTextHTML = data && data.introSectionText ? documentToHtmlString(data.introSectionText.json) : '';
 	$: innovateSectionTextHTML = data && data.innovateSectionText ? documentToHtmlString(data.innovateSectionText.json) : '';
 	$: advisorsTextHTML = data && data.advisors ? documentToHtmlString(data.advisors.json) : '';
+
+
+	let isOpen = false;
+	const dispatch = createEventDispatcher();
+
+	function toggleAccordion() {
+			isOpen = !isOpen;
+			dispatch('toggle', { isOpen });
+	}
 
 </script>
 
@@ -71,6 +82,37 @@
 	
 	<p>Leadership is paramount in the success of a business especially early-stage companies. It shapes the vision, encourages innovation, navigates uncertainty, and builds a resilient and cohesive team. As such, we are raising our initial fund, Waypoint 1, to back the strong leaders produced at our nation's service academies. </p>
 </section>
+
+{#if data.faqs.length > 0}
+	 <section class="small faq-section">
+		 <h3 class="heading-4">Frequently Asked Questions</h3>
+		 {#each data.faqs as faq}
+				<div class="faq-container">
+					<button
+						class="question"
+						on:click={toggleAccordion}
+						aria-expanded={isOpen}
+						aria-controls="content-{faq.question}"
+					>
+						<span class="text">{faq.question}</span>
+						<span class="icon" aria-label="{isOpen ? ' Collapse Icon ' : 'Expand Icon'}">{isOpen ? ' – ' : '+'}</span>
+					</button>
+					{#if isOpen}
+						<div 
+							class="answer {isOpen ? "expanded" : "collapsed"}"
+							id="content-{faq.question}"
+							role="region"
+							aria-labelledby="content-{faq.question}"
+							transition:slide
+						>
+							{@html documentToHtmlString(faq.answer?.json)}
+						</div>
+					{/if}
+			 	</div>
+		 {/each}
+		 
+	 </section>
+{/if}}
 
 <section class="large">
 	<SectionTitle title="Leadership" />
@@ -136,6 +178,33 @@
 		.compass-container {
 			transform: translateY(0);
 		}
+	}
+
+	.faq-section {
+		margin: 4rem auto;
+		padding: 1rem 0;
+		border-bottom: 1px solid var(--light-gold);
+	}
+	.faq-section .question {
+		display: flex;
+		width: 100%;
+		padding: 2rem 1rem 0;
+		background: transparent;
+		border: 0;
+		font-weight: 800;
+		text-align: left;
+		cursor: pointer;
+	}
+	.faq-section .question .text {
+		flex: 1 1 auto;
+	}
+	.faq-section .question .icon {
+		flex: 0 0 auto;
+		font-size: var(--fluid-2);
+		color: var(--royal);
+	}
+	.faq-section .answer {
+		padding: 0 1rem;
 	}
 
 </style>

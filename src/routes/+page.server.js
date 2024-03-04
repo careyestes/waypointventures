@@ -75,6 +75,15 @@ const combinedQuery = `
       }
     }
   }
+  faq: faqCollection {
+    items {
+      question,
+      order,
+      answer {
+        json
+      } 
+    }
+  }
 }
 `
 
@@ -93,6 +102,7 @@ export async function load() {
   const innovationDividersItems = data.innovationDivider.items[0];
   const leadershipItems = data.leadership.items;
   const advisorsItems = data.advisors.items[0];
+  const faqItems = data.faq.items;
   
   return {
     beliefSectionTitle: beliefSectionItems.sectionTitle,
@@ -103,6 +113,7 @@ export async function load() {
     innovateSectionText: innovationSectionItems.sectionText,
     innovationDivider: innovationDividersItems.dividerText,
     leadership: leadershipItems,
+    faqs: faqItems,
     advisors: advisorsItems.sectionText,
   };
 }
