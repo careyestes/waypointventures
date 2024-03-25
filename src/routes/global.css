@@ -159,6 +159,10 @@ section p {
 	padding: 1rem 0;
 }
 
+.faq-section .answer p {
+  padding: 0;
+}
+
 .heading-1 {
   font-size: var(--fluid-4);
   font-weight: 700;

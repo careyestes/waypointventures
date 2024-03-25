@@ -1,5 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 	import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 	import Hero from '../lib/Hero.svelte';
@@ -20,12 +20,20 @@
 	$: innovateSectionTextHTML = data && data.innovateSectionText ? documentToHtmlString(data.innovateSectionText.json) : '';
 	$: advisorsTextHTML = data && data.advisors ? documentToHtmlString(data.advisors.json) : '';
 
-
+	let sortedFAQ = [];
 	let isOpen = false;
+	let expandedIndex = null;
+
+	onMount(() => {
+    sortedFAQ = data.faqs.sort((a, b) => a.order - b.order);
+  });
+
 	const dispatch = createEventDispatcher();
 
-	function toggleAccordion() {
+	function toggleAccordion(index) {
 			isOpen = !isOpen;
+			expandedIndex = expandedIndex === index ? null : index;
+
 			dispatch('toggle', { isOpen });
 	}
 
@@ -83,33 +91,35 @@
 	<p>Leadership is paramount in the success of a business especially early-stage companies. It shapes the vision, encourages innovation, navigates uncertainty, and builds a resilient and cohesive team. As such, we are raising our initial fund, Waypoint 1, to back the strong leaders produced at our nation's service academies. </p>
 </section>
 
-{#if data.faqs.length > 0}
+{#if sortedFAQ.length > 0}
 	 <section class="small faq-section">
-		 <h3 class="heading-4">Frequently Asked Questions</h3>
-		 {#each data.faqs as faq}
-				<div class="faq-container">
-					<button
-						class="question"
-						on:click={toggleAccordion}
-						aria-expanded={isOpen}
-						aria-controls="content-{faq.question}"
+		<h3 class="heading-4">Frequently Asked Questions</h3>
+		{#each sortedFAQ as faq, index}
+			<div class="faq-container">
+				<button
+					class="question"
+					on:click={() => toggleAccordion(index)} 
+					aria-expanded={expandedIndex === index} 
+					aria-controls={`content-${index}`}
+				>
+					<span class="text">{faq.question}</span>
+					<span class="icon" aria-label={expandedIndex === index ? 'Collapse Icon' : 'Expand Icon'}>
+						{expandedIndex === index ? ' – ' : '+'}
+					</span>
+				</button>
+				{#if expandedIndex === index} 
+					<div 
+						class="answer {expandedIndex === index ? 'expanded' : 'collapsed'}"
+						id={`content-${index}`}
+						role="region"
+						aria-labelledby={`content-${index}`}
+						transition:slide
 					>
-						<span class="text">{faq.question}</span>
-						<span class="icon" aria-label="{isOpen ? ' Collapse Icon ' : 'Expand Icon'}">{isOpen ? ' – ' : '+'}</span>
-					</button>
-					{#if isOpen}
-						<div 
-							class="answer {isOpen ? "expanded" : "collapsed"}"
-							id="content-{faq.question}"
-							role="region"
-							aria-labelledby="content-{faq.question}"
-							transition:slide
-						>
-							{@html documentToHtmlString(faq.answer?.json)}
-						</div>
-					{/if}
-			 	</div>
-		 {/each}
+						{@html documentToHtmlString(faq.answer?.json)}
+					</div>
+				{/if}
+			</div>
+		{/each}
 		 
 	 </section>
 {/if}}
@@ -183,12 +193,15 @@
 	.faq-section {
 		margin: 4rem auto;
 		padding: 1rem 0;
+	}
+	.faq-container {
 		border-bottom: 1px solid var(--light-gold);
 	}
+
 	.faq-section .question {
 		display: flex;
 		width: 100%;
-		padding: 2rem 1rem 0;
+		padding: 1.4rem 1rem;
 		background: transparent;
 		border: 0;
 		font-weight: 800;
@@ -204,7 +217,7 @@
 		color: var(--royal);
 	}
 	.faq-section .answer {
-		padding: 0 1rem;
+		padding: 0 1rem 1.5rem;
 	}
 
 </style>
