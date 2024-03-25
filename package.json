@@ -11,7 +11,7 @@
     "setup": "node ./contentful/setup.js"
   },
   "engines": {
-    "node": ">=18"
+    "node": "18.x"
   },
   "devDependencies": {
     "contentful-import": "^9.4.8",
