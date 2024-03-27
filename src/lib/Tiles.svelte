@@ -29,6 +29,10 @@
     margin: 0 auto;
   }
 
+  .graphic-tile-container {
+    transform: translateY(-4rem);
+  }
+
   .graphic-tile-container ul {
     display: flex;
     justify-content: space-between;

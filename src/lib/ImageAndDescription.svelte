@@ -2,6 +2,7 @@
   export let imageURL;
   export let alt;
   export let heading;
+  export let title;
   export let description;
   export let small = false;
 </script>
@@ -14,6 +15,9 @@
   {/if}
   <div class="flexed-item">
     <h3 class="heading-4">{heading}</h3>
+    {#if title}
+      <h4>{title}</h4>
+    {/if}
     {#if small}
       <small>{@html description}</small>
     {:else}
@@ -23,8 +27,9 @@
 </div>
 
 <style>
-  h3 {
-    margin-bottom: 1rem;
+  h4 {
+    font-size: var(--fluid-0);
+    font-style: italic;
   }
   .image {
     display: flex;

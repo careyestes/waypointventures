@@ -1,10 +1,10 @@
 <script>
-	import Logo from '../lib/Logo.svelte'
+	import Logo from '../lib/Logo.svelte';
 </script>
 
 <header>
 	<h1>
-		<Logo />
+		<Logo size="large" />
 	</h1>
 	<h2 class="heading-3">Guiding Start-Ups to Success.</h2>
 </header>
@@ -28,8 +28,8 @@
 	header {
 		display: flex;
 		align-items: center;
-		height: 90vh;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 10%, transparent 50%), url('../assets/cyano-map.png');
+		height: 60vh;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 10%, transparent 50%, rgba(0, 0, 0, 0.6) 90%), url('../assets/cyano-map.png');
 		background-size: 125%;
 		backdrop-filter: brightness(50%);
 		color: var(--paper);
@@ -45,20 +45,23 @@
 		text-align: center;
 	}
 	h2 {
+		margin: 0;
+		color: var(--paper);
 		font-family: var(--base-font);
 		text-align: center;
 		-webkit-text-stroke: 0.5px var(--brass);
 		text-shadow: 0 0 30px var(--navy);
+		transform: translateY(-1.6rem);
 	}
 
 	/* Small Viewports */
 	@media screen and (max-width: 1200px) {
 		header {
 			flex-direction: column;
-			gap: 4rem;
+			gap: 2rem;
 			justify-content: space-between;
 			align-items: center;
-			height: 70vh;
+			height: 90vh;
 			background-size: cover;
 		}
 		h1 {

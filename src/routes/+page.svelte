@@ -17,15 +17,19 @@
 
 	$: beliefSectionTextHTML = data && data.beliefSectionText ? documentToHtmlString(data.beliefSectionText.json) : '';
 	$: introSectionTextHTML = data && data.introSectionText ? documentToHtmlString(data.introSectionText.json) : '';
+	$: focusSectionTextHTML = data && data.focusSectionText ? documentToHtmlString(data.focusSectionText.json) : '';
+	$: experienceSectionTextHTML = data && data.experienceSectionText ? documentToHtmlString(data.experienceSectionText.json) : '';
 	$: innovateSectionTextHTML = data && data.innovateSectionText ? documentToHtmlString(data.innovateSectionText.json) : '';
 	$: advisorsTextHTML = data && data.advisors ? documentToHtmlString(data.advisors.json) : '';
 
 	let sortedFAQ = [];
+	let sortedLeadership = [];
 	let isOpen = false;
 	let expandedIndex = null;
 
 	onMount(() => {
     sortedFAQ = data.faqs.sort((a, b) => a.order - b.order);
+    sortedLeadership = data.leadership.sort((a, b) => a.order - b.order);
   });
 
 	const dispatch = createEventDispatcher();
@@ -47,7 +51,7 @@
 
 
 <section class="small compass-container">
-	<img src={compass} alt="A compass with directional lines eminating from it." />
+	<img src={compass} class="compass-illustration" alt="A compass with directional lines eminating from it." />
 	{@html introSectionTextHTML}
 </section>
 
@@ -78,17 +82,13 @@
 
 <section class="small">
 	<img src={telescope} alt="An illustration of a telescope looking up at the stars with a ship in the background." />
-	<p>At Waypoint, we also believe US Service academy graduates possess a unique set of qualities that make them exceptionally well-suited for the role of startup executives. The rigorous training and discipline instilled in these individuals during their time at service academies translate into strong leadership skills, resilience, and a commitment to excellence.</p>
+	{@html focusSectionTextHTML}
 </section>
 
 <SectionDivider title="Proven adaptability to complex and dynamic challenges." />
 
 <section class="small">
-	<p>Their experience in collaborative team settings, combined with a results-oriented mindset, fosters effective communication and problem-solving, essential attributes for leading a startup. The strong ethical foundation instilled during their service academy education aligns with the increasing demand for socially responsible and ethical business practices.</p>
-	
-	<p>Startups led by service academy graduates are likely to prioritize integrity, accountability, and a culture of responsibility, enhancing long-term sustainability. By investing in these graduates, we intend to tap into a pool of leaders known for adaptability, resilience, and a results-oriented mindset, contributing to the success and ethical standing of the businesses they lead.</p>
-	
-	<p>Leadership is paramount in the success of a business especially early-stage companies. It shapes the vision, encourages innovation, navigates uncertainty, and builds a resilient and cohesive team. As such, we are raising our initial fund, Waypoint 1, to back the strong leaders produced at our nation's service academies. </p>
+	{@html experienceSectionTextHTML}
 </section>
 
 {#if sortedFAQ.length > 0}
@@ -122,26 +122,27 @@
 		{/each}
 		 
 	 </section>
-{/if}}
+{/if}
 
-<section class="large">
-	<SectionTitle title="Leadership" />
-</section>
-<br />
-<section class="small">
-	<div class="flex direcion-column gap-4">
+{#if sortedLeadership.length > 0}
+	<section class="large">
+		<SectionTitle title="Leadership" />
+	</section>
+	<br />
+	<section class="small">
+		<div class="flex direcion-column gap-4">
 
-		{#each data.leadership as leader}
-			<ImageAndDescription small={true} imageURL={leader.image?.url} alt="" heading={leader.name} description={documentToHtmlString(leader.bio?.json)} />
-		{/each}
-	
-		<div>
-			<h3 class="heading-4" align="center">Advisors</h3>
-			{@html advisorsTextHTML}
+			{#each sortedLeadership as leader}
+				<ImageAndDescription small={true} imageURL={leader.image?.url} alt="" heading={leader.name} title={leader.title} description={documentToHtmlString(leader.bio?.json)} />
+			{/each}
+		
+			<div>
+				{@html advisorsTextHTML}
+			</div>
+
 		</div>
-
-	</div>
-</section>
+	</section>
+{/if}
 
 
 <style>
@@ -160,38 +161,44 @@
 		max-width: 80rem;
 	}
 	.first-section {
-		max-width: 55rem;
+		max-width: 80rem;
 		margin: 0 auto;
-	transform: translateY(-5.5rem);
+		padding: 2rem 4rem 4rem;
+		background: var(--paper);
+		transform: translateY(-10rem);
+		border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, var(--navy), rgba(3, 19, 36, 0)) 1 100%;
+		border-radius: 6rem 6rem 0 0;
 	}
 	.first-section h2 {
 		margin: 0 0 1rem;
-		font-size: var(--fluid-5);
-		line-height: calc(var(--fluid-6) / 1.2);
+		font-size: var(--fluid-6);
+		line-height: calc(var(--fluid-6) * 1.1);
 	}
-	
+
 	.compass-container {
-		transform: translateY(-4rem);
+		transform: translateY(-11rem);
+	}
+	.compass-container .compass-illustration {
+		margin: 0 0 4rem;
 	}
 	@media screen and (max-width: 1200px) {
 		.first-section {
-			margin: 0 auto;
-			padding: 0 2rem;
-			transform: translateY(0);
+			padding: 2rem 2rem 4rem;
+			border-radius: 3rem 3rem 0 0;
 		}
 		.first-section h2 {
-			line-height: var(--fluid-5)
+			font-size: var(--fluid-5);
+			line-height: calc(var(--fluid-6) / 1.2);
 		}
 		.small {
 			padding: 0 2rem;
 		}
-		.compass-container {
-			transform: translateY(0);
-		}
 	}
 
 	.faq-section {
-		margin: 4rem auto;
+		margin: 4rem auto 0;
 		padding: 1rem 0;
 	}
 	.faq-container {
