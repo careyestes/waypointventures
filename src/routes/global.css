@@ -193,6 +193,9 @@ nav button {
 .flex.align-center {
   align-items: center;
 }
+.flex.align-start {
+  align-items: flex-start;
+}
 .flex.gap-4 {
   gap: 4rem;
 }

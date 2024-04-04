@@ -129,7 +129,7 @@
 		<SectionTitle title="Leadership" />
 	</section>
 	<br />
-	<section class="small">
+	<section class="medium">
 		<div class="flex direcion-column gap-4">
 
 			{#each sortedLeadership as leader}
@@ -193,6 +193,9 @@
 			line-height: calc(var(--fluid-6) / 1.2);
 		}
 		.small {
+			padding: 0 2rem;
+		}
+		.medium {
 			padding: 0 2rem;
 		}
 	}

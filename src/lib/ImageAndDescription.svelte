@@ -7,7 +7,7 @@
   export let small = false;
 </script>
 
-<div class="flex align-center container">
+<div class="flex align-start container">
   {#if imageURL}
     <div class="flexed-item image">
       <img src={imageURL} alt={alt}>
@@ -34,9 +34,9 @@
   .image {
     display: flex;
     align-items: center;
-    flex: 0 0 30rem;
-    width: 30rem;
-    height: 30rem;
+    flex: 0 0 20rem;
+    width: 20rem;
+    height: 20rem;
     margin-right: 4rem;
     border: 5px solid var(--brass);
     border-radius: 50%;
@@ -50,6 +50,7 @@
     }
     .container {
       flex-direction: column;
+      align-items: center;
       gap: 2rem;
     }
   }
