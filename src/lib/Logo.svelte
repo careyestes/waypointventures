@@ -21,7 +21,7 @@
     .waypoint-logo .st1{fill:var(--paper);stroke:var(--brass);stroke-width:0.5;stroke-miterlimit:10;}
     .waypoint-logo .st2{fill:var(--light-gold);stroke:var(--brass);stroke-width:0.5;stroke-miterlimit:10;}
     .waypoint-logo.large {
-      max-height: 8rem;
+      max-height: 7rem;
       min-height: 5.25rem;
       transform: translateY(0rem);
       filter: drop-shadow(0px 0px 1px var(--medium-gold));

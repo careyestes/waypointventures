@@ -165,7 +165,7 @@
 		margin: 0 auto;
 		padding: 2rem 4rem 4rem;
 		background: var(--paper);
-		transform: translateY(-10rem);
+		transform: translateY(-8rem);
 		border-width: 1px;
     border-style: solid;
     border-image: linear-gradient(to bottom, var(--navy), rgba(3, 19, 36, 0)) 1 100%;
@@ -178,10 +178,10 @@
 	}
 
 	.compass-container {
-		transform: translateY(-11rem);
+		transform: translateY(-8rem);
 	}
 	.compass-container .compass-illustration {
-		margin: 0 0 4rem;
+		margin: 0 0 2rem;
 	}
 	@media screen and (max-width: 1200px) {
 		.first-section {

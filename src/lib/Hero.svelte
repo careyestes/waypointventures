@@ -38,7 +38,7 @@
 	h1, h2 {
 		display: flex;
 		justify-content: center;
-		flex: 1 1 100%;
+		flex: 1 1 50%;
 	}
 	h1 {
 		padding: 10rem 10rem;
