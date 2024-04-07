@@ -6,7 +6,7 @@
 	<h1>
 		<Logo size="large" />
 	</h1>
-	<h2 class="heading-3">Guiding Start-Ups to Success.</h2>
+	<h2 class="heading-3">Guiding Startups to Success.</h2>
 </header>
 
 <style>

@@ -10,6 +10,7 @@
 	import SectionCircle from '../lib/SectionCircle.svelte';
 
 	import compass from '../assets/compass.png'
+	import partnerPhoto from '../assets/Partner_Group_Photo.jpg'
 	import leader from '../assets/leader-1.jpg'
 	import navCompass from '../assets/nav-compass.png'
 	import telescope from '../assets/telescope.png'
@@ -56,6 +57,10 @@
 </section>
 
 <Tiles />
+
+<!-- <p class="full-page-divider">
+	<img src={partnerPhoto} alt="A group photo of the leaders of Waypoint, from left to right, Billy Hurley, Jeff Chapman, and Jeff Walker. All three men are dressed in a jacket, white shirt, standing proudly in front of a staircase.">
+</p> -->
 
 <section class="large">
 	<SectionTitle title={data.beliefSectionTitle} />
@@ -176,6 +181,21 @@
 		font-size: var(--fluid-6);
 		line-height: calc(var(--fluid-6) * 1.1);
 	}
+
+	.full-page-divider {
+    margin: 4rem 0;
+    /* padding: 6rem 1rem; */
+    /* background: var(--royal) url('../assets/topo-sea-map.jpg') center center; */
+    background-size: cover;
+    border-top: 5px solid var(--medium-gold);
+    border-bottom: 5px solid var(--medium-gold);
+    color: var(--paper);
+    font-family: var(--header-font);
+    font-size: var(--fluid-4);
+    font-weight: 400;
+    line-height: var(--fluid-4);
+    text-align: center;
+  }
 
 	.compass-container {
 		transform: translateY(-8rem);
